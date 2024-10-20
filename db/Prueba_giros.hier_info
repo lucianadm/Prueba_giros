@@ -1,0 +1,23 @@
+|control_motor
+reset => reg_fstate.Derecho_giroDer.OUTPUTSELECT
+reset => reg_fstate.Gira_Der_90.OUTPUTSELECT
+reset => reg_fstate.Gira_Izq_90.OUTPUTSELECT
+reset => reg_fstate.Derecho_giroIzq.OUTPUTSELECT
+reset => MD.OUTPUTSELECT
+reset => MD.OUTPUTSELECT
+reset => MI.OUTPUTSELECT
+reset => MI.OUTPUTSELECT
+reset => H.OUTPUTSELECT
+clk => fstate~1.DATAIN
+Muro => reg_fstate.DATAA
+Muro => Selector0.IN1
+Muro => Selector2.IN0
+Muro => Selector1.IN1
+MD[0] <= MD.DB_MAX_OUTPUT_PORT_TYPE
+MD[1] <= MD.DB_MAX_OUTPUT_PORT_TYPE
+MI[0] <= MI.DB_MAX_OUTPUT_PORT_TYPE
+MI[1] <= MI.DB_MAX_OUTPUT_PORT_TYPE
+H[0] <= <GND>
+H[1] <= H.DB_MAX_OUTPUT_PORT_TYPE
+
+
